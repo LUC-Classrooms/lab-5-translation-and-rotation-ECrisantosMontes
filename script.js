@@ -11,16 +11,20 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(250, 230, 250);
   
   push(); // create a new temporary drawing layer
-  translate(0, 0); // change these arguments
+  translate(width/2, height/2); // change these arguments
   
   //add an if() statement here
-  
+  if(mouseIsPressed){
+    rotate(HALF_PI)
+  } else{
+    rotate(0);
+  }
   line(0, -50, 40, -20);
   line(0, -50, -40, -20);
-  fill(255);
+  fill(250);
   ellipse(0, 0, 55);
   ellipse(0, -35, 40);
   ellipse(0, -60, 30);
